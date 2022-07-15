@@ -32,7 +32,7 @@ static bool objtool_create_backup(const char *_objname)
 		return false;
 	}
 
-	strcpy(name, _objname);
+	strncpy(name, _objname);
 	strcpy(name + len, ".orig");
 
 	d = open(name, O_CREAT|O_WRONLY|O_TRUNC, 0644);
